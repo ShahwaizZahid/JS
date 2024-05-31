@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> In-Browser Markdown Edition </title>
+    <script src="https://kit.fontawesome.com/e63496ca66.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
+    <link rel="stylesheet" href="In-browser-Markdown-Edition.css">
+    <link rel="stylesheet" href="IN-browser-MArkdown-css-Elements.css">
+</head>
+<body>
+    <div class=" main-container">
+        <header class="header">
+            <div class="file-name-container">
+
+                <div class="select-file-div">
+                    <i class="fa-regular fa-circle-right fa-2xl" style="background: var(hea);"></i>
+                </div>
+                <div class="markdown-heading"> MarkDown</div>
+ٖ                <div class="file-name">
+                    <div>
+                        <div class="document-icon"><i class="fa-solid fa-book 2xl"></i></div>
+                    </div>
+                    <div>
+                        <div class="document-name">Document Name</div>
+                        <input class="document-file-name" type="text" >
+                    </div>
+                </div>
+            </div>
+
+            <div class="save-delete-conatainer ">
+                <div><i class="fa-regular fa-trash-can"></i></div>
+                <div class="save-btn">
+                    <i class="fa-solid fa-book"></i>
+                    <div>Save Changes</div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+
+    <section class="heading-content-container">
+        <div class="heading-markdown-content">
+            <div>MARKDOWN</div>
+            <i class="fa-solid fa-eye"></i>
+        </div>
+        <div class="heading-preview-content">
+            <div>PREVIEW</div>
+            <i class="fa-solid fa-eye"></i>
+        </div>
+    </section>
+
+    <main class="content-container">
+        <textarea class="markdown-content">
+            </textarea>
+        <div class="preview-content">
+        </div>
+    </main>
+    </div>
+
+    <div class="new-document-container">
+        <div class="my-document"> MY DOCUMENT</div>
+        <button class="new-doc-btn">+ New Document</button>
+        <div class="created-docs-container">
+
+            <template class="doc-create-template">
+                <div class="created-doc ">
+                    <div class="created-doc-icon"> <i class="fa-solid fa-book 2xl"></i></div>
+                    <div class="created-doc-details">
+                        <div class="created-doc-date">24-2-20022</div>
+                        <div class="created-doc-name"> ms sasddad.sa</div>
+                    </div>
+                </div>
+            </template>
+
+        </div>
+
+        <div class="theme-container">
+            <i class="fa-regular fa-moon moon"></i>
+            <div>
+                <input type="checkbox" name="" id="">
+            </div>
+            <i class="fa-regular fa-sun sun"></i>
+        </div>
+    </div>
+
+    <div class=" delete-doc-container">
+      <div class="delete-content-container">
+        <div class="delete-content">
+        </div>
+        <div class="cancel-delete-btn">
+          <button class="cancel">Cancel</button>
+          <button class="deleteFile">Delete</button>
+        </div>
+      </div>
+
+      <div class="cant-delete-container">
+        <div class="cantDelete-content">
+        </div>
+        <div class="cancel-delete-btn">
+          <button class="notCancel">Cancel</button>
+        </div>
+    </div>
+    </div>
+    <script src="In-browser-Markdown-Edition.js"></script>
+</body>
+</html>

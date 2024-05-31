@@ -1,0 +1,474 @@
+* {
+  padding: 0%;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --header-and-docfile: rgb(43, 45, 49);
+  --content-area: rgb(21, 22, 25);
+  --text-white: white;
+  --text-gray: rgb(193, 196, 203);
+}
+
+::-webkit-scrollbar {
+  cursor: pointer;
+  background: linear-gradient(transparent, rgb(228, 102, 67));
+  border-radius: 6px;
+  width: 12px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(transparent, #00c6ff);
+}
+::-webkit-scrollbar-thumb {
+  background-color: linear-gradient(transparent, red);
+  border-radius: 6px;
+}
+.markdown-content::-webkit-scrollbar {
+  cursor: pointer;
+  resize: none;
+}
+
+.main-conatiner {
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  position: relative;
+  left: 0;
+  background: var(--header-and-docfile);
+  width: 100%;
+  height: 72px;
+  display: flex;
+  color: var(--text-white);
+  justify-content: space-between;
+  transition: left 0.5s ease-in;
+}
+
+.file-name-container {
+  display: flex;
+}
+
+.select-file-div {
+  cursor: pointer;
+  height: 72px;
+  width: 72px;
+  background-color: var(--header-and-docfile);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.select-file-div:hover {
+  border-radius: 50%;
+  background: rgb(228, 102, 67);
+}
+
+.markdown-heading {
+  height: 80%;
+  width: 184px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Commissioner, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 5px;
+  border-left: 1px solid var(--text-white);
+  border-right: 1px solid var(--text-white);
+  margin: 5px;
+  cursor: pointer;
+}
+
+.markdown-heading:hover {
+  color: rgb(228, 102, 67);
+  border-left: 1px solid rgb(228, 102, 67);
+  border-right: 1px solid rgb(228, 102, 67);
+}
+
+.file-name {
+  height: 36px;
+  display: flex;
+  flex-flow: row;
+  -webkit-box-pack: center;
+  justify-content: center;
+  align-self: center;
+  cursor: pointer;
+  margin-left: 16px;
+}
+
+.fa-book {
+  font-size: 20px;
+  margin-right: 16px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.document-name {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 15px;
+  color: var(--text-gray);
+}
+
+.file-name input {
+  width: fit-content;
+  color: var(--text-white);
+  background-color: var(--header-and-docfile);
+  border: none;
+  padding: 20px;
+  margin-bottom: 3px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  padding: 0px;
+  caret-color: rgb(228, 102, 67);
+}
+
+.file-name input:focus {
+  outline: none;
+  border-bottom: 1px solid var(--text-white);
+}
+
+.save-delete-conatainer {
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.save-btn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 60%;
+  height: 45px;
+  padding: 0px 17px;
+  margin: 0px 16px 0px 0px;
+  border: none;
+  border-radius: 4px;
+  color: var(--text-white);
+  background-color: rgb(228, 102, 67);
+  font-weight: 400;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.1s ease-in;
+}
+.save-btn:hover {
+  transform: scaleX(1.1);
+}
+
+.save-delete-conatainer .fa-trash-can {
+  transition: all 0.1s ease-in;
+}
+.save-delete-conatainer .fa-trash-can:hover {
+  transform: scale(1.3);
+  color: rgb(228, 102, 67);
+}
+
+.heading-content-container {
+  width: 100%;
+  height: 55px;
+  background: var(--content-area);
+  display: flex;
+  align-items: center;
+  color: var(--text-white);
+  font-size: 20px;
+  letter-spacing: 3px;
+  cursor: pointer;
+}
+
+.heading-markdown-content {
+  width: 50%;
+  border-right: 1px solid var(--text-white);
+  margin-left: 26px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.heading-markdown-content i,
+.heading-preview-content i {
+  margin-right: 50px;
+  transition: transform 1.5 ease-in;
+}
+
+.heading-content-container i:hover {
+  color: rgb(228, 102, 67);
+  transform: scale(1.3);
+}
+
+.heading-preview-content {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  width: 50%;
+  margin-left: 26px;
+}
+
+.content-container {
+  /* position: fixed; */
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  max-height: fit-content;
+  background: var(--content-area);
+}
+
+.markdown-content {
+  padding: 16px;
+  width: 100%;
+  height: 100vh;
+  resize: none;
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  padding-left: 16px;
+  background: var(--content-area);
+  border: none;
+  color: var(--text-gray);
+  padding-bottom: 20px;
+}
+
+.markdown-content:focus {
+  outline: none;
+  border: none;
+}
+
+.preview-content {
+  cursor: pointer;
+  overflow-y: auto;
+  width: 100%;
+  color: var(--text-white);
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  padding-left: 16px;
+  height: 100%;
+  padding-left: 16px;
+  background: var(--content-area);
+  padding-bottom: 40px;
+}
+
+.new-document-container {
+  position: fixed;
+  top: 0px;
+  width: 250px;
+  height: 100vh;
+  left: -250px;
+  transition: left 0.5s ease-in;
+  background-color: var(--header-and-docfile);
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.my-document {
+  margin-top: 27px;
+  margin-bottom: 29px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 16px;
+  letter-spacing: 2px;
+  color: var(--text-gray);
+  text-align: center;
+  cursor: pointer;
+}
+
+.new-doc-btn {
+  width: 202px;
+  height: 40px;
+  padding: 0px 17px;
+  border-radius: 4px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(228, 102, 67);
+  font-weight: 500;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  margin: auto;
+}
+
+.created-docs-container {
+  width: 90%;
+  height: 80%;
+  margin: auto;
+  margin-top: 10px;
+  color: var(--text-white);
+  overflow: auto;
+}
+
+.created-doc {
+  width: 90%;
+  display: flex;
+  margin-top: 15px;
+  margin-left: 16px;
+}
+
+.created-doc-date {
+  color: gray;
+  font-size: 15px;
+}
+
+.created-doc-name:hover {
+  color: rgb(228, 102, 67);
+}
+
+.theme-container {
+  width: 100%;
+  height: 7%;
+}
+
+.fa-xmark {
+  color: var(--text-white);
+}
+
+.theme-container i {
+  color: var(--text-gray);
+  font-size: 25px;
+}
+
+.theme-container {
+  display: flex;
+  justify-content: center;
+}
+
+.theme-container div {
+  margin: 0 10px;
+}
+
+input[type="checkbox"] {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  appearance: none;
+  background-color: var(--text-gray);
+  outline: none;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+  border-radius: 20px;
+}
+
+input:checked[type="checkbox"] {
+  background-color: black;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  top: 0;
+  left: 0;
+  bottom: 20px;
+  background: #fff;
+  transform: scale(-0.6);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+
+input:checked[type="checkbox"]::before {
+  left: 30px;
+}
+
+.delete-doc-container {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(124, 129, 135, 0.5);
+  display: none;
+}
+
+.delete-content-container,
+.cant-delete-container {
+  border-radius: 10px;
+  position: fixed;
+  inset: 50% auto auto 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  padding: 24px;
+  display: flex;
+  flex-flow: column;
+  background-color: rgb(21, 22, 25);
+  width: 35%;
+  height: fit-content;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.delete-content-container {
+  display: none;
+}
+.cant-delete-container {
+  display: none;
+}
+
+.cant-delete-container button {
+  display: flex;
+  flex-grow: 2;
+  transition: all 0.1s ease-in;
+}
+
+.delete-content,
+.cantDelete-content {
+  color: white;
+  padding: 10px;
+}
+.cancel-delete-btn {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+.cancel-delete-btn button {
+  transition: all 0.1s ease-in;
+  margin: 20px;
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: 40px;
+  padding: 20px;
+  border: none;
+  border-radius: 4px;
+  color: var(--text-white);
+  background-color: rgb(228, 102, 67);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+}
+.cant-delete-container button:hover,
+.cancel-delete-btn button:hover {
+  transform: scaleX(1.1);
+}
+
+.openFile {
+  background-color: black;
+  color: rgb(228, 102, 67);
+  padding: 5px;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+
+.moon {
+  opacity: 1;
+}
+.sun {
+  opacity: 0;
+}
+@media screen and (max-width: 550px) {
+  .markdown-heading {
+    color: red;
+    display: none;
+  }
+}

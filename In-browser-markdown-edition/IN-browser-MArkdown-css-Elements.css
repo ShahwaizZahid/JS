@@ -1,0 +1,139 @@
+:root {
+  --text-white: rgb(255, 255, 255);
+  --text-gray: rgb(193, 196, 203);
+}
+
+h1 {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 700;
+  margin: 12px;
+  font-size: 35px;
+  line-height: 42px;
+  color: var(--text-white);
+}
+
+h2 {
+  margin: 12px;
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 37px;
+  color: var(--text-white);
+}
+
+h3 {
+  margin: 15px;
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 32px;
+  color: var(--text-white);
+}
+h4 {
+  margin: 12px;
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 23px;
+  line-height: 26px;
+  color: var(--text-white);
+}
+h5 {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20pxpx;
+  line-height: 21px;
+  color: var(--text-white);
+  margin: 12px;
+}
+h6 {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+  color: rgb(228, 102, 67);
+  margin: 12px;
+}
+p {
+  margin: 12px;
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--text-gray);
+}
+
+ol,
+ul {
+  margin: 12px;
+}
+
+ol li,
+ul li {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 24px;
+  padding-left: 9px;
+  color: var(--text-white);
+}
+
+blockquote {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  margin: 0px;
+  padding: 20px 20px 20px 20px;
+  width: 90%;
+  border-radius: 4px;
+  border-left: 4px solid rgb(228, 102, 67);
+  background-color: rgb(43, 45, 49);
+}
+blockquote p {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  color: var(--text-white);
+}
+blockquote p a {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  color: var(--text-white);
+}
+
+pre {
+  margin: 0px;
+  padding: 24px 24px 24px 20px;
+  width: 90%;
+  border-radius: 4px;
+  background-color: rgb(43, 45, 49);
+}
+pre code {
+  white-space: pre-wrap;
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  color: var(--text-white);
+}
+p code {
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  color: var(--text-white);
+}
